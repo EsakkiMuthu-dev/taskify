@@ -9,7 +9,7 @@ interface Props {
 
 const TodoList = ({ todos, setTodo, setTodos }: Props) => {
   const handleDelete = (id: number) => {
-    let newTodos: Todo[] = [];
+    setTodos(todos.filter((todo) => todo.id !== id));
   };
   const markAsDone = (id: number) => {
     setTodos(
